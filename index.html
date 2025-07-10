@@ -1,0 +1,129 @@
+<!--
+  index.html - L'Oréal Home Page with Floating Chatbot
+  Modern, responsive, and beginner-friendly.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>L'Oréal | Home</title>
+    <!-- Google Material Icons for icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts for modern look -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="main-nav">
+      <div class="logo-area">
+        <img src="img/loreal-logo.png" alt="L'Oréal Logo" class="logo" />
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section class="about-hero">
+      <h1>Discover Your True <span class="highlight">Beauty</span></h1>
+      <p>
+        Unleash your confidence with L'Oréal. Science, luxury, and innovation
+        for everyone.
+      </p>
+      <div class="hero-btns">
+        <a href="products.html">Shop Now</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </section>
+
+    <!-- Featured Products Strip -->
+    <section class="featured-products home-featured">
+      <h2>Featured Products</h2>
+      <div class="products-grid">
+        <div class="product-card">
+          <img
+            src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80"
+            alt="Revitalift Serum"
+          />
+          <h3>Revitalift Serum</h3>
+          <div class="view-details">View Details</div>
+        </div>
+        <div class="product-card">
+          <img
+            src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80"
+            alt="Infallible Foundation"
+          />
+          <h3>Infallible Foundation</h3>
+          <div class="view-details">View Details</div>
+        </div>
+        <div class="product-card">
+          <img
+            src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80"
+            alt="Elvive Shampoo"
+          />
+          <h3>Elvive Shampoo</h3>
+          <div class="view-details">View Details</div>
+        </div>
+        <div class="product-card">
+          <img
+            src="https://images.unsplash.com/photo-1512499617640-c2f999098c01?auto=format&fit=crop&w=400&q=80"
+            alt="Color Riche Lipstick"
+          />
+          <h3>Color Riche Lipstick</h3>
+          <div class="view-details">View Details</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Floating Chatbot Icon -->
+    <div id="chatbot-icon" title="Chat with us">
+      <span class="material-icons">smart_toy</span>
+    </div>
+
+    <!-- Chatbot Window (hidden by default) -->
+    <div id="chatbot-window">
+      <div class="chatbot-header">
+        <span>Chat with L'Oréal</span>
+        <div>
+          <button id="minimize-btn" title="Minimize" aria-label="Minimize">
+            <span class="material-icons">remove</span>
+          </button>
+          <button id="close-btn" title="Close" aria-label="Close">
+            <span class="material-icons">close</span>
+          </button>
+        </div>
+      </div>
+      <div class="chatbot-body">
+        <div id="chatWindow" class="chat-window">
+          <div class="msg ai">👋 Hello! How can I help you today?</div>
+        </div>
+        <form id="chatForm" class="chat-form">
+          <label for="userInput" class="visually-hidden">Message</label>
+          <input
+            id="userInput"
+            name="userInput"
+            type="text"
+            placeholder="Ask me anything…"
+            autocomplete="off"
+            required
+          />
+          <button type="submit" id="sendBtn">
+            <span class="material-icons">send</span>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
