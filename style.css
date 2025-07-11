@@ -351,6 +351,10 @@ body {
   width: 100%;
   border-radius: 10px;
   margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+.product-card:hover img {
+  transform: scale(1.05);
 }
 .product-card h3 {
   font-size: 1.1rem;
@@ -360,6 +364,9 @@ body {
 .product-card p {
   font-size: 0.98rem;
   color: #444;
+}
+.product-card button {
+  transition: background 0.3s ease;
 }
 
 /* Footer */
@@ -376,6 +383,7 @@ body {
   margin: 0 8px;
   color: #000;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 .site-footer a:hover {
   color: #bfa37c;
@@ -583,5 +591,252 @@ body {
     width: 48px;
     height: 48px;
     font-size: 1.3rem;
+  }
+}
+
+/* === HERO SECTION === */
+.hero-section {
+  background: url('assets/hero-bg.jpg') no-repeat center center/cover;
+  position: relative;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* dark overlay for text contrast */
+}
+
+.hero-section > div {
+  position: relative; /* keeps content above overlay */
+  z-index: 1;
+}
+
+/* === DROPDOWN MENUS === */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+}
+
+/* === NEWSLETTER SECTION === */
+.newsletter-bg {
+  background: url('assets/newsletter-bg.jpg') no-repeat center center/cover;
+  position: relative;
+  color: #fff;
+}
+
+.newsletter-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.newsletter-bg > div {
+  position: relative;
+  z-index: 1;
+}
+
+/* === SMOOTH TRANSITIONS === */
+a, button {
+  transition: all 0.3s ease;
+}
+
+/* === UTILITY CLASSES FOR INDEX.HTML === */
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.bg-white {
+  background-color: #fff;
+}
+.bg-gray-50 {
+  background-color: #faf8f3;
+}
+.max-w-7xl {
+  max-width: 80rem;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.mb-12 {
+  margin-bottom: 3rem;
+}
+.mb-8 {
+  margin-bottom: 2rem;
+}
+.flex {
+  display: flex;
+}
+.grid {
+  display: grid;
+}
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.md\:grid-cols-3 {
+  /* For simplicity, always 3 columns on medium screens and up */
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.md\:grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.grid-cols-1 {
+  grid-template-columns: 1fr;
+}
+.gap-6 {
+  gap: 1.5rem;
+}
+.gap-8 {
+  gap: 2rem;
+}
+.gap-12 {
+  gap: 3rem;
+}
+.items-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.rounded-lg {
+  border-radius: 0.75rem;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.shadow-md {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+}
+.text-center {
+  text-align: center;
+}
+.text-3xl {
+  font-size: 2rem;
+}
+.font-bold {
+  font-weight: 700;
+}
+.font-medium {
+  font-weight: 500;
+}
+.font-semibold {
+  font-weight: 600;
+}
+.text-xl {
+  font-size: 1.25rem;
+}
+.text-lg {
+  font-size: 1.125rem;
+}
+.text-sm {
+  font-size: 0.98rem;
+}
+.text-white {
+  color: #fff;
+}
+.text-gray-600 {
+  color: #444;
+}
+.text-gray-900 {
+  color: #222;
+}
+.text-pink-600 {
+  color: #e91e63;
+}
+.text-pink-800 {
+  color: #ad1457;
+}
+.hover\:text-pink-800:hover {
+  color: #ad1457;
+}
+.bg-pink-600 {
+  background-color: #e91e63;
+}
+.hover\:bg-pink-700:hover {
+  background-color: #c2185b;
+}
+.rounded-full {
+  border-radius: 9999px;
+}
+.p-4 {
+  padding: 1rem;
+}
+.p-6 {
+  padding: 1.5rem;
+}
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+.mb-4 {
+  margin-bottom: 1rem;
+}
+.w-full {
+  width: 100%;
+}
+.h-48 {
+  height: 12rem;
+}
+.h-64 {
+  height: 16rem;
+}
+.object-cover {
+  object-fit: cover;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.inset-0 {
+  top: 0; right: 0; bottom: 0; left: 0;
+}
+.bg-black {
+  background: rgba(0,0,0,1);
+}
+.bg-opacity-30 {
+  background: rgba(0,0,0,0.3);
+}
+.transition {
+  transition: all 0.3s ease;
+}
+.duration-500 {
+  transition-duration: 0.5s;
+}
+.group:hover .group-hover\:scale-110 {
+  transform: scale(1.10);
+}
+@media (max-width: 900px) {
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 700px) {
+  .md\:grid-cols-3 {
+    grid-template-columns: 1fr;
+  }
+  .md\:grid-cols-4 {
+    grid-template-columns: 1fr;
+  }
+  .h-48, .h-64 {
+    height: 10rem;
   }
 }
