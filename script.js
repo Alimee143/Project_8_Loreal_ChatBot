@@ -3,7 +3,6 @@
 // Get DOM elements
 const chatbotIcon = document.getElementById("chatbot-icon");
 const chatbotWindow = document.getElementById("chatbot-window");
-const minimizeBtn = document.getElementById("minimize-btn");
 const closeBtn = document.getElementById("close-btn");
 const chatbotBody = chatbotWindow.querySelector(".chatbot-body");
 
@@ -11,30 +10,12 @@ const chatbotBody = chatbotWindow.querySelector(".chatbot-body");
 chatbotIcon.addEventListener("click", () => {
   chatbotWindow.classList.add("active");
   chatbotBody.style.display = "flex";
-  minimizeBtn.style.display = "inline";
 });
-
-// Minimize chatbot window
-minimizeBtn.addEventListener("click", () => {
-  chatbotBody.style.display = "none";
-  minimizeBtn.style.display = "none";
-});
-
-// Restore chatbot window when header is clicked (if minimized)
-chatbotWindow
-  .querySelector(".chatbot-header")
-  .addEventListener("click", (e) => {
-    if (chatbotBody.style.display === "none" && e.target.tagName !== "BUTTON") {
-      chatbotBody.style.display = "flex";
-      minimizeBtn.style.display = "inline";
-    }
-  });
 
 // Close chatbot window
 closeBtn.addEventListener("click", () => {
   chatbotWindow.classList.remove("active");
   chatbotBody.style.display = "flex";
-  minimizeBtn.style.display = "inline";
 });
 
 // --- Simple Chatbot Logic ---
